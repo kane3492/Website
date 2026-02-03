@@ -45,9 +45,13 @@
       top: 20px;
       right: 20px;
       z-index: 10;
+      display: flex;
+      gap: 8px;
+      align-items: center;
     }
 
-    .toolbar button {
+    .toolbar button,
+    .toolbar a.button {
       width: 36px;
       height: 36px;
       border-radius: 10px;
@@ -57,6 +61,20 @@
       color: var(--fg);
       cursor: pointer;
       font-size: 14px;
+      display: inline-grid;
+      place-items: center;
+      text-decoration: none;
+    }
+
+    .toolbar a.button {
+      font-size: 12px;
+      padding: 0 6px;
+    }
+
+    .toolbar button:focus,
+    .toolbar a.button:focus {
+      outline: 2px solid rgba(107,110,249,0.18);
+      outline-offset: 2px;
     }
 
     /* Stage */
@@ -204,6 +222,7 @@
 
   <header class="toolbar">
     <button id="themeToggle" aria-label="Toggle theme">◐</button>
+    <a class="button" href="https://stresstest.uk" target="_blank" rel="noopener" aria-label="Stresstest — production company">SS</a>
   </header>
 
   <main class="stage">
